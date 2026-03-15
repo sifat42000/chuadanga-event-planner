@@ -140,7 +140,14 @@ export default function Home() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                     <div className="absolute bottom-6 left-6 right-6">
-                      <h3 className="text-xl font-bold text-white">{service.title}</h3>
+                      <h3 className="text-xl font-bold text-white">
+                        <span className="block">{service.title}</span>
+                        {service.banglaTitle && (
+                          <span className="block text-sm font-medium text-white/80">
+                            {service.banglaTitle}
+                          </span>
+                        )}
+                      </h3>
                     </div>
                   </div>
                 </Link>

@@ -41,7 +41,12 @@ export default function ServiceDetail() {
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-6xl font-bold mb-6"
           >
-            {service.title}
+            <span className="block">{service.title}</span>
+            {service.banglaTitle && (
+              <span className="block text-2xl md:text-3xl font-medium text-gray-200">
+                {service.banglaTitle}
+              </span>
+            )}
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

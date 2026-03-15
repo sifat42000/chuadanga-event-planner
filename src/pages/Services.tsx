@@ -57,8 +57,13 @@ export default function Services() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
                   </div>
                   <div className="p-8 flex flex-col flex-grow">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-rose-600 transition-colors line-clamp-1">
-                      {service.title}
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-rose-600 transition-colors">
+                      <span className="block">{service.title}</span>
+                      {service.banglaTitle && (
+                        <span className="block text-base font-medium text-gray-500">
+                          {service.banglaTitle}
+                        </span>
+                      )}
                     </h3>
                     <p className="text-gray-600 mb-6 line-clamp-2 flex-grow">
                       {service.description}

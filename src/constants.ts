@@ -581,6 +581,7 @@ export const SERVICES: Service[] = [
   {
     id: "haldi",
     title: "Haldi Ceremony Decoration",
+    banglaTitle: "হলদি অনুষ্ঠান সজ্জা",
     description: "Vibrant yellow-themed decorations for your traditional Haldi ceremony.",
     image: "https://i.ibb.co.com/n8n4TxzD/24537-jpg.jpg",
     images: ["https://picsum.photos/seed/haldi/800/600"],
@@ -589,6 +590,7 @@ export const SERVICES: Service[] = [
   {
     id: "mehndi",
     title: "Mehndi Ceremony Decoration",
+    banglaTitle: "মেহেদি অনুষ্ঠান সজ্জা",
     description: "Creative and colorful setups for a memorable Mehndi night.",
     image: "https://i.ibb.co.com/hJ1kkfnr/9b32301106b3d2b7b9fbb7149bfc167d-1.jpg",
     images: ["https://i.ibb.co.com/GfMR1Spr/23376-jpg.jpg", "https://i.ibb.co.com/pBMWRFVh/7894-jpg.jpg"],
@@ -599,6 +601,7 @@ export const SERVICES: Service[] = [
   {
     id: "wedding-stage",
     title: "Wedding Stage Decoration",
+    banglaTitle: "বিয়ের স্টেজ ডেকোরেশন",
     description: "Grand and elegant stage designs for your big day.",
     image: "https://i.ibb.co.com/n8w6SH5K/23863-jpg.jpg",
     images: ["https://picsum.photos/seed/wedding/800/600"],
@@ -607,6 +610,7 @@ export const SERVICES: Service[] = [
   {
     id: "reception-stage",
     title: "Wedding Reception Stage Decoration",
+    banglaTitle: "বিয়ের রিসেপশন স্টেজ ডেকোরেশন",
     description: "Sophisticated and modern reception stage setups.",
     image: "https://i.ibb.co.com/99mQZQTm/bor-3.jpg",
     images: [
@@ -642,6 +646,7 @@ export const SERVICES: Service[] = [
   {
     id: "birthday",
     title: "Birthday Stage Decoration",
+    banglaTitle: "জন্মদিনের স্টেজ ডেকোরেশন",
     description: "Fun and themed decorations for all ages.",
     image: "https://i.ibb.co.com/7xCHK4PL/bor-1.jpg",
     images: [
@@ -657,6 +662,7 @@ export const SERVICES: Service[] = [
   {
     id: "engagement",
     title: "Engagement Ceremony Stage Decoration",
+    banglaTitle: "এঙ্গেজমেন্ট অনুষ্ঠানের স্টেজ ডেকোরেশন",
     description: "Romantic and classy setups for your engagement.",
     image: "https://i.ibb.co.com/yc0kdJFr/1510-jpg.jpg",
     images: ["https://picsum.photos/seed/engagement/800/600"],
@@ -665,6 +671,7 @@ export const SERVICES: Service[] = [
   {
     id: "islamic-mahfil",
     title: "Islamic Mahfil Stage Decoration",
+    banglaTitle: "ইসলামিক মহফিল স্টেজ ডেকোরেশন",
     description: "Respectful and beautiful arrangements for religious gatherings.",
     image: "https://i.ibb.co.com/Y7kfsYPV/mahfil-9.jpg",
     images: [
@@ -684,6 +691,7 @@ export const SERVICES: Service[] = [
   {
     id: "building-lighting-stage-decoration",
     title: "Building Lighting Stage Decoration",
+    banglaTitle: "বিল্ডিং লাইটিং স্টেজ ডেকোরেশন",
     description: "Beautiful lighting decoration for buildings and stages, creating a stunning and festive atmosphere for weddings and special events.",
     image: "https://i.ibb.co.com/jZTnDCVT/decoration-lighting-service-330-1.jpg",
     images: [
@@ -706,6 +714,7 @@ export const SERVICES: Service[] = [
   {
     id: "baby-shower",
     title: "Baby Shower Decoration",
+    banglaTitle: "বেবি শাওয়ার ডেকোরেশন",
     description: "Sweet and gentle decorations to celebrate your new arrival.",
     image: "https://i.ibb.co.com/QvQ1t1XR/45-PXL-20250614-115336274.jpg",
     images: [
@@ -734,6 +743,7 @@ export const SERVICES: Service[] = [
   {
     id: "lighting-decor",
     title: "Road & Ceiling Lighting Decoration",
+    banglaTitle: "রোড ও সিলিং লাইটিং ডেকোরেশন",
     description: "Professional lighting decoration for roads and ceilings to create a stunning atmosphere.",
     image: "https://i.ibb.co.com/5HGBh8z/4431.jpg",
     images: [
@@ -755,6 +765,7 @@ export const SERVICES: Service[] = [
   {
     id: "wedding-night-room",
     title: "Wedding Night Room Decoration",
+    banglaTitle: "বিয়ের রাতের রুম ডেকোরেশন",
     description: "Romantic and luxurious room decoration for the wedding night.",
     image: "https://i.ibb.co.com/sphWX9zJ/8641-jpg.jpg",
     images: ["https://picsum.photos/seed/weddingroom/800/600"],
@@ -763,6 +774,7 @@ export const SERVICES: Service[] = [
   {
     id: "wedding-car",
     title: "Wedding Car Decoration",
+    banglaTitle: "বিয়ের গাড়ি ডেকোরেশন",
     description: "Elegant car decoration to make the wedding ride special.",
     image: "https://i.ibb.co.com/NdgHKqdW/download-36.jpg",
     images: ["https://picsum.photos/seed/weddingcar/800/600"],
@@ -771,6 +783,7 @@ export const SERVICES: Service[] = [
   {
     id: "bride-groom-garlands",
     title: "Bride & Groom Flower Garlands",
+    banglaTitle: "বর-কনেকে ফুলের মালা",
     description: "Fresh and beautiful flower garlands for bride and groom.",
     image: "https://i.ibb.co.com/bg5GDwzs/bor-2.jpg",
     images: [
@@ -792,6 +805,7 @@ export const SERVICES: Service[] = [
   {
     id: "selfie-booth",
     title: "Selfie Booth",
+    banglaTitle: "সেলফি বুথ",
     description: "A fun and stylish selfie booth setup for guests to capture memorable moments during weddings and special events.",
     image: "https://i.ibb.co.com/Q3RWm1N3/Sarvesh-event.jpg",
     images: [
@@ -834,6 +848,7 @@ export const SERVICES: Service[] = [
   {
     id: "palanquin-rental",
     title: "Wedding Palanquin Rental",
+    banglaTitle: "বিয়ের পালকী ভাড়া",
     description: "Traditional palanquin rental with charming design for solemn entry.",
     image: "https://i.ibb.co.com/httff4V/Forever-in-love-decorgoals.jpg",
     images: [
@@ -856,6 +871,7 @@ export const SERVICES: Service[] = [
   {
     id: "wedding-gate",
     title: "Wedding Gate Decoration",
+    banglaTitle: "বিয়ের গেট ডেকোরেশন",
     description: "Beautiful gate decorations to welcome guests for your wedding.",
     image: "https://i.ibb.co.com/7JKVdvc1/Fairy-Tale-Wedding-with-Flower-Arches-and-Floating-Lanterns.jpg",
     images: ["https://picsum.photos/seed/weddinggate/800/600"],

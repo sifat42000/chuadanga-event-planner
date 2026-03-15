@@ -36,7 +36,15 @@ export default function PackageGallery() {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">{pkg.name} Designs</h1>
-              <p className="text-xl text-rose-600 font-bold">{service.title} • {pkg.priceRange}</p>
+              <p className="text-xl text-rose-600 font-bold">
+                <span className="block">{service.title}</span>
+                {service.banglaTitle && (
+                  <span className="block text-base text-rose-400 font-medium">
+                    {service.banglaTitle}
+                  </span>
+                )}
+                <span className="block mt-1 text-lg">{pkg.priceRange}</span>
+              </p>
             </div>
           </div>
         </div>

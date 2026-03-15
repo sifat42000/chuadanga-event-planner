@@ -14,6 +14,7 @@ export interface Package {
 export interface Service {
   id: string;
   title: string;
+  banglaTitle?: string;
   description: string;
   image: string;
   images: string[];
