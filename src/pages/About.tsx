@@ -63,10 +63,9 @@ export default function About() {
               transition={{ duration: 0.6 }}
             >
               <img
-                src="https://i.ibb.co.com/SbHfNrc/23849-jpg.jpg"
+                src="/Image/haldi/Basic Package/compressed_10251.jpg.jpeg"
                 alt="Event Management"
                 className="rounded-3xl shadow-2xl"
-                referrerPolicy="no-referrer"
               />
             </motion.div>
           </div>
@@ -120,10 +119,9 @@ export default function About() {
               className="order-2 md:order-1"
             >
               <img
-                src="https://i.ibb.co.com/kgmycHry/22424-jpg.jpg"
+                src="/Image/engagement/Basic Package/compressed_Consuelo Hernandez(JPG).jpg.jpeg"
                 alt="Decoration Style"
                 className="rounded-3xl shadow-2xl"
-                referrerPolicy="no-referrer"
               />
             </motion.div>
             <motion.div

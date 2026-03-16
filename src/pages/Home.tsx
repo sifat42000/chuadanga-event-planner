@@ -16,10 +16,9 @@ export default function Home() {
       <section className="relative h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://i.ibb.co.com/tTDmcxHC/22120-jpg.jpg"
+            src="/Image/wedding-stage/Basic Package/compressed_25175.jpg (1).jpeg"
             alt="Event Decoration"
             className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-black/50" />
         </div>
@@ -94,10 +93,9 @@ export default function Home() {
               className="relative"
             >
               <img
-                src="https://i.ibb.co.com/qYhqVNK5/24528-jpg.jpg"
+                src="/Image/reception-stage/compressed_1510.jpg (1).jpeg"
                 alt="Our Work"
                 className="rounded-3xl shadow-2xl"
-                referrerPolicy="no-referrer"
               />
               <div className="absolute -bottom-8 -left-8 bg-rose-600 text-white p-8 rounded-3xl shadow-xl hidden lg:block">
                 <p className="text-4xl font-bold mb-1">100+</p>
@@ -136,7 +134,7 @@ export default function Home() {
                       src={service.image}
                       alt={service.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      referrerPolicy="no-referrer"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                     <div className="absolute bottom-6 left-6 right-6">

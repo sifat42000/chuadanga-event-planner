@@ -71,7 +71,7 @@ export default function PackageGallery() {
                     src={img}
                     alt={`${pkg.name} Design ${index + 1}`}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                    referrerPolicy="no-referrer"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                     <div className="bg-white/20 backdrop-blur-md p-4 rounded-full text-white">
@@ -115,7 +115,7 @@ export default function PackageGallery() {
               src={selectedImage}
               alt="Selected Design"
               className="max-w-full max-h-full object-contain rounded-xl"
-              referrerPolicy="no-referrer"
+              loading="lazy"
               onClick={(e) => e.stopPropagation()}
             />
           </motion.div>

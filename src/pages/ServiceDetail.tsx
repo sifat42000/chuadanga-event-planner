@@ -28,7 +28,7 @@ export default function ServiceDetail() {
             src={service.image}
             alt={service.title}
             className="w-full h-full object-cover blur-sm"
-            referrerPolicy="no-referrer"
+            loading="lazy"
           />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
@@ -132,7 +132,7 @@ export default function ServiceDetail() {
                       src={img}
                       alt={`${service.title} Design ${index + 1}`}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                      referrerPolicy="no-referrer"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                       <div className="bg-white/20 backdrop-blur-md p-4 rounded-full text-white">
@@ -177,7 +177,7 @@ export default function ServiceDetail() {
               src={selectedImage}
               alt="Enlarged view"
               className="max-w-full max-h-full object-contain"
-              referrerPolicy="no-referrer"
+              loading="lazy"
             />
           </motion.div>
         )}
