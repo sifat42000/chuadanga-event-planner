@@ -14,6 +14,29 @@ export const BUSINESS_INFO: BusinessInfo = {
   facebook: "https://www.facebook.com/weddingplanningcd",
 };
 
+export const PACKAGES = [
+  {
+    name: "Basic Package",
+    priceRange: "10k – 15k",
+    description: "Simple yet elegant decoration for intimate gatherings. A beautiful setup .",
+  },
+  {
+    name: "Standard Package",
+    priceRange: "15k – 35k",
+    description: "Beautiful medium-scale decoration with more floral arrangements.",
+  },
+  {
+    name: "Premium Package",
+    priceRange: "35k – 60k",
+    description: "High-quality decoration with premium lighting and backdrop designs.",
+  },
+  {
+    name: "Royal Package",
+    priceRange: "60k+",
+    description: "Luxury decoration for grand events with exquisite details and grand stages.",
+  },
+];
+
 const EngagementCeremonyPackages = [
   {
     id: "basic",

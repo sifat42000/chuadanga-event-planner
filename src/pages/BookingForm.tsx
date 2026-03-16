@@ -113,6 +113,12 @@ export default function BookingForm() {
                   </div>
                 </div>
               )}
+
+              {packageName && !designImage && (
+                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4">
+                  <p className="font-bold text-white">Selected Package: {packageName}</p>
+                </div>
+              )}
             </div>
 
             <div className="mt-8 text-sm text-rose-200">

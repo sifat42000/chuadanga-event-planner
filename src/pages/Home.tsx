@@ -6,7 +6,7 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, MessageCircle, Phone } from 'lucide-react';
-import { SERVICES, BUSINESS_INFO } from '../constants';
+import { SERVICES, BUSINESS_INFO, PACKAGES } from '../constants';
 import ContactSection from '../components/ContactSection';
 
 export default function Home() {
@@ -161,6 +161,42 @@ export default function Home() {
               <span>View All Services</span>
               <ArrowRight size={20} />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Event Packages Section */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Event Packages</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Choose from our range of event decoration packages tailored to your needs and budget.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {PACKAGES.map((pkg, index) => (
+              <motion.div
+                key={pkg.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 p-6 border border-gray-100"
+              >
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{pkg.name}</h3>
+                <p className="text-rose-600 font-semibold mb-4">{pkg.priceRange}</p>
+                <p className="text-gray-600 mb-6">{pkg.description}</p>
+                <Link
+                  to="/booking"
+                  state={{ packageName: pkg.name }}
+                  className="w-full bg-rose-600 hover:bg-rose-700 text-white px-6 py-3 rounded-full font-semibold text-center block transition-colors"
+                >
+                  Book Now
+                </Link>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
