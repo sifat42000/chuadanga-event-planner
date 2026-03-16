@@ -742,7 +742,7 @@ export const SERVICES: Service[] = [
     images: [
       "/Image/baby-shower/compressed_ADORAB~1.JPG",
       "/Image/baby-shower/compressed_baby shower decorations.jfif",
-      "/Image/baby-shower/compressed_Baby Shower Decor_ #babyshower #decor #balloons.jfif",
+      "/Image/baby-shower/compressed_Baby_Shower_Decor_babyshower_decor_balloons.jfif",
       "/Image/baby-shower/compressed_Chrzest Święty i roczek Olisia 🤍.jfif",
       "/Image/baby-shower/compressed_download (29) (1).jfif",
       "/Image/baby-shower/compressed_download (30) (1).jfif",
