@@ -83,7 +83,7 @@ const EngagementCeremonyPackages = [
   {
     id: "royal",
     name: "Royal Package",
-    priceRange: "60k+",
+    priceRange: "70k+",
     description: "Luxury decoration for grand events with exquisite details and grand stages.",
     images: [
       "/Image/engagement/Royal Package/compressed_1510.jpg (2).jpeg",
@@ -170,7 +170,7 @@ const WeddingCarPackages = [
   {
     id: "royal",
     name: "Royal Package",
-    priceRange: "60k+",
+    priceRange: "70k+",
     description: "Luxury decoration for grand events with exquisite details and grand stages.",
     images: [
       "/Image/wedding-car/Royal Package/compressed_car Decoration.jpg",
@@ -246,7 +246,7 @@ const HaldiCeremonyPackages = [
   {
     id: "royal",
     name: "Royal Package",
-    priceRange: "60k+",
+    priceRange: "70k+",
     description: "Luxury decoration for grand events with exquisite details and grand stages.",
     images: [
       "/Image/haldi/Royal Package/compressed_15868.jpg.jpeg",
@@ -326,7 +326,7 @@ const WeddingNightRoomPackages = [
   {
     id: "royal",
     name: "Royal Package",
-    priceRange: "60k+",
+    priceRange: "70k+",
     description: "Luxury decoration for grand events with exquisite details and grand stages.",
     images: [
       "/Image/wedding-night-room/Royal Package/compressed_20 Romantic Wedding Room Decoration Ideas 2024.jpg",
@@ -415,7 +415,7 @@ const WeddingStagePackages = [
   {
     id: "royal",
     name: "Royal Package",
-    priceRange: "60k+",
+    priceRange: "70k+",
     description: "Luxury decoration for grand events with exquisite details and grand stages.",
     images: [
       "/Image/wedding-stage/Royal Package/compressed_1510.jpg.jpeg",
@@ -513,7 +513,7 @@ const WeddingGatePackages = [
   {
     id: "royal",
     name: "Royal Package",
-    priceRange: "60k+",
+    priceRange: "70k+",
     description: "Luxury decoration for grand events with exquisite details and grand stages.",
     images: [
       "/Image/wedding-gate/Royal Package/compressed_15 Wedding Entrance Decor Ideas to Wow Your Guests Instantly.jpg",
@@ -547,7 +547,7 @@ const MehediStagePackages = [
   {
     id: "standard",
     name: "Standard Mehedi Stage",
-    priceRange: "12k – 25k",
+    priceRange: "15k – 35k",
     description: "Colorful Mehedi stage with floral decorations, lights, and elegant seating.",
     images: [
       "/Image/mehndi/Standard Package/compressed_mehedi-standard-1.jpeg",
@@ -560,7 +560,7 @@ const MehediStagePackages = [
   {
     id: "premium",
     name: "Premium Mehedi Stage",
-    priceRange: "25k – 45k",
+    priceRange: "35k – 60k",
     description: "Premium Mehedi stage with vibrant colors, flower canopy, and designer backdrop.",
     images: [
       "/Image/mehndi/Premium Package/compressed_mehedi-premi-1.jpeg",
@@ -572,7 +572,7 @@ const MehediStagePackages = [
   {
     id: "royal",
     name: "Royal Mehedi Stage",
-    priceRange: "45k+",
+    priceRange: "70k+",
     description: "Grand Mehedi stage with luxury seating, heavy floral work, and premium lighting.",
     images: [
       "/Image/mehndi/Royal Package/compressed_mehedi-royel-1.jpeg",
