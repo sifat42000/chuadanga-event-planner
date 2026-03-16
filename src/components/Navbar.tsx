@@ -15,9 +15,17 @@ export default function Navbar() {
     <nav className="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
-          <Link to="/" className="flex flex-col">
-            <span className="text-xl font-bold text-rose-600 leading-tight">Chuadanga</span>
-            <span className="text-xs font-medium text-gray-500 tracking-widest uppercase">Event Planner</span>
+          <Link to="/" className="flex items-center space-x-3">
+            <img
+              src="/logo/logo.jpeg"
+              alt="Chuadanga Event Planner logo"
+              className="h-10 w-10 rounded-full object-cover"
+              loading="lazy"
+            />
+            <div className="flex flex-col">
+              <span className="text-xl font-bold text-rose-600 leading-tight">Chuadanga</span>
+              <span className="text-xs font-medium text-gray-500 tracking-widest uppercase">Event Planner</span>
+            </div>
           </Link>
 
           {/* Desktop Menu */}

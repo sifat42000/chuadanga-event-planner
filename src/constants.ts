@@ -347,13 +347,24 @@ const WeddingStagePackages = [
       "/Image/wedding-stage/Basic Package/compressed_25210.jpg (1).jpeg"
     ],
   },
-  // {
-  //   id: "standard",
-  //   name: "Standard Package",
-  //   priceRange: "15k – 35k",
-  //   description: "Beautiful medium-scale decoration with more floral arrangements.",
-  //   images: Array.from({ length: 9 }, (_, i) => `https://picsum.photos/seed/weddingstage-standard-${i}/800/600`),
-  // },
+  {
+    id: "standard",
+    name: "Standard Package",
+    priceRange: "15k – 35k",
+    description: "Beautiful medium-scale decoration with more floral arrangements.",
+    images: [
+      "/Image/wedding-stage/Standard Package/compressed_standa-1.jpeg",
+      "/Image/wedding-stage/Standard Package/compressed_standa-2.jpeg",
+      "/Image/wedding-stage/Standard Package/compressed_standa-3.jpeg",
+      "/Image/wedding-stage/Standard Package/compressed_standa-4.jpeg",
+      "/Image/wedding-stage/Standard Package/compressed_standa-5.jpeg",
+      "/Image/wedding-stage/Standard Package/compressed_standa-6.jpeg",
+      "/Image/wedding-stage/Standard Package/compressed_standa-7.jpeg",
+     
+
+
+    ],
+  },
   {
     id: "premium",
     name: "Premium Package",
@@ -500,7 +511,7 @@ const MehediStagePackages = [
   {
     id: "basic",
     name: "Basic Mehedi Stage",
-    priceRange: "8k – 12k",
+    priceRange: "10-15k",
     description: "Simple Mehedi stage decoration with basic floral and fabric backdrop.",
     images: [
       "/Image/mehndi/Basic Package/compressed_mehedi-besic-1.jpeg",
@@ -554,7 +565,7 @@ export const SERVICES: Service[] = [
   {
     id: "haldi",
     title: "Haldi Ceremony Decoration",
-    banglaTitle: "হলদি অনুষ্ঠান সজ্জা",
+    banglaTitle: "গায়ে হলুদ ডেকোরেশন",
     description: "Vibrant yellow-themed decorations for your traditional Haldi ceremony.",
     image: "/Image/haldi/Royal Package/compressed_24537.jpg.jpeg",
     images: [
@@ -567,7 +578,7 @@ export const SERVICES: Service[] = [
   {
     id: "mehndi",
     title: "Mehndi Ceremony Decoration",
-    banglaTitle: "মেহেদি অনুষ্ঠান সজ্জা",
+    banglaTitle: "মেহেদি ডেকোরেশন",
     description: "Creative and colorful setups for a memorable Mehndi night.",
     image: "/Image/mehndi/Basic Package/compressed_mehedi-besic-1.jpeg",
     images: [
@@ -582,7 +593,7 @@ export const SERVICES: Service[] = [
   {
     id: "wedding-stage",
     title: "Wedding Stage Decoration",
-    banglaTitle: "বিয়ের স্টেজ ডেকোরেশন",
+    banglaTitle: "বিয়ের স্টেজ ডেকোরেশন",
     description: "Grand and elegant stage designs for your big day.",
     image: "/Image/wedding-stage/Basic Package/compressed_25175.jpg (1).jpeg",
     images: [
@@ -595,7 +606,7 @@ export const SERVICES: Service[] = [
   {
     id: "reception-stage",
     title: "Wedding Reception Stage Decoration",
-    banglaTitle: "বিয়ের রিসেপশন স্টেজ ডেকোরেশন",
+    banglaTitle: "রিসিপশন স্টেজ ডেকোরেশন",
     description: "Sophisticated and modern reception stage setups.",
     image: "/Image/reception-stage/compressed_1510.jpg (1).jpeg",
     images: [
@@ -625,7 +636,7 @@ export const SERVICES: Service[] = [
       "/Image/reception-stage/compressed_3641.jpg (1).jpeg",
       "/Image/reception-stage/compressed_8439.jpg.jpeg"
     ],
-    packages: [],
+    packages: WeddingStagePackages,
   },
   {
     id: "birthday",
@@ -646,7 +657,7 @@ export const SERVICES: Service[] = [
   {
     id: "engagement",
     title: "Engagement Ceremony Stage Decoration",
-    banglaTitle: "এঙ্গেজমেন্ট অনুষ্ঠানের স্টেজ ডেকোরেশন",
+    banglaTitle: "এনগেজমেন্ট স্টেজ ডেকোরেশন",
     description: "Romantic and classy setups for your engagement.",
     image: "/Image/engagement/Basic Package/compressed_Consuelo Hernandez(JPG).jpg.jpeg",
     images: [
@@ -659,7 +670,7 @@ export const SERVICES: Service[] = [
   {
     id: "islamic-mahfil",
     title: "Islamic Mahfil Stage Decoration",
-    banglaTitle: "ইসলামিক মহফিল স্টেজ ডেকোরেশন",
+    banglaTitle: " মাহফিল স্টেজ ডেকোরেশন",
     description: "Respectful and beautiful arrangements for religious gatherings.",
     image: "/Image/islamic-mahfil/compressed_mahfil-1.jpeg",
     images: [
@@ -679,7 +690,7 @@ export const SERVICES: Service[] = [
   {
     id: "building-lighting-stage-decoration",
     title: "Building Lighting Stage Decoration",
-    banglaTitle: "বিল্ডিং লাইটিং স্টেজ ডেকোরেশন",
+    banglaTitle: "দাওয়াত / অনুষ্ঠান স্টেজ ডেকোরেশন",
     description: "Beautiful lighting decoration for buildings and stages, creating a stunning and festive atmosphere for weddings and special events.",
     image: "/Image/building-lighting-stage-decoration/compressed_download (29) (2).jfif",
     images: [
@@ -702,7 +713,7 @@ export const SERVICES: Service[] = [
   {
     id: "baby-shower",
     title: "Baby Shower Decoration",
-    banglaTitle: "বেবি শাওয়ার ডেকোরেশন",
+    banglaTitle: "বেবি শাওয়ার ডেকোরেশন",
     description: "Sweet and gentle decorations to celebrate your new arrival.",
     image: "/Image/baby-shower/compressed_ADORAB~1.JPG",
     images: [
@@ -726,7 +737,7 @@ export const SERVICES: Service[] = [
   {
     id: "lighting-decor",
     title: "Road & Ceiling Lighting Decoration",
-    banglaTitle: "রোড ও সিলিং লাইটিং ডেকোরেশন",
+    banglaTitle: "রোড সিলিং লাইটিং",
     description: "Professional lighting decoration for roads and ceilings to create a stunning atmosphere.",
     image: "/Image/lighting-decor/compressed_17158.jpg.jpeg",
     images: [
@@ -748,7 +759,7 @@ export const SERVICES: Service[] = [
   {
     id: "wedding-night-room",
     title: "Wedding Night Room Decoration",
-    banglaTitle: "বিয়ের রাতের রুম ডেকোরেশন",
+    banglaTitle: "বাসর ঘর ডেকোরেশন",
     description: "Romantic and luxurious room decoration for the wedding night.",
     image: "/Image/wedding-night-room/Basic Package/compressed_25356.jpg.jpeg",
     images: [
@@ -761,7 +772,7 @@ export const SERVICES: Service[] = [
   {
     id: "wedding-car",
     title: "Wedding Car Decoration",
-    banglaTitle: "বিয়ের গাড়ি ডেকোরেশন",
+    banglaTitle: "গাড়ি সাজানো",
     description: "Elegant car decoration to make the wedding ride special.",
     image: "/Image/wedding-car/Basic Package/compressed_Wedding Car Decoration.jpg",
     images: [
@@ -774,7 +785,7 @@ export const SERVICES: Service[] = [
   {
     id: "bride-groom-garlands",
     title: "Bride & Groom Flower Garlands",
-    banglaTitle: "বর-কনেকে ফুলের মালা",
+    banglaTitle: "বর-বধু মালা",
     description: "Fresh and beautiful flower garlands for bride and groom.",
     image: "/Image/bride-groom-garlands/compressed_download (29) (1).jpg",
     images: [
@@ -810,7 +821,7 @@ export const SERVICES: Service[] = [
       "/Image/selfie-booth/compressed_7892.jpg.jpeg",
       "/Image/selfie-booth/compressed_7896.jpg.jpeg",
       "/Image/selfie-booth/compressed_7899.jpg.jpeg",
-      "/Image/selfie-booth/compressed_7905.jpg.jpeg",
+      "/Image/selfie-booth/compressed_7905.jpg.jpeg", 
       "/Image/selfie-booth/compressed_8648.jpg.jpeg",
       "/Image/selfie-booth/compressed_All Red Photobooth for your wedding.jfif",
       "/Image/selfie-booth/compressed_Decoration for kids and function.jfif",
@@ -837,7 +848,7 @@ export const SERVICES: Service[] = [
   {
     id: "palanquin-rental",
     title: "Wedding Palanquin Rental",
-    banglaTitle: "বিয়ের পালকী ভাড়া",
+    banglaTitle: "পালকি ভাড়া",
     description: "Traditional palanquin rental with charming design for solemn entry.",
     image: "/Image/palanquin-rental/compressed_download (29).jfif",
     images: [
@@ -860,7 +871,7 @@ export const SERVICES: Service[] = [
   {
     id: "wedding-gate",
     title: "Wedding Gate Decoration",
-    banglaTitle: "বিয়ের গেট ডেকোরেশন",
+    banglaTitle: "গেট ডেকোরেশন",
     description: "Beautiful gate decorations to welcome guests for your wedding.",
     image: "/Image/wedding-gate/Basic Package/compressed_AnyConv.com__Decor exterior nunta.jpeg",
     images: [
