@@ -10,6 +10,7 @@ import { SERVICES } from '../constants';
 import { ArrowLeft, X, Maximize2 } from 'lucide-react';
 import ContactSection from '../components/ContactSection';
 import { trackEvent } from '../utils/pixel';
+import { useNavigate } from "react-router-dom";
 
 export default function PackageGallery() {
   const { serviceId, packageId } = useParams();
@@ -21,6 +22,7 @@ export default function PackageGallery() {
   if (!service || !pkg) {
     return <Navigate to="/services" replace />;
   }
+  const navigate = useNavigate();
 
   return (
     <div className="pt-24">
@@ -83,11 +85,24 @@ export default function PackageGallery() {
                 <Link
                   to="/booking"
                   state={{ designImage: img, packageName: pkg.name, serviceName: service.title }}
-                  onClick={() => {
+                  onClick={(e) => {
+                    e.preventDefault();
+
+                    console.log("🔥 InitiateCheckout click fired");
+
                     trackEvent('InitiateCheckout', {
                       content_name: pkg.name
-
                     });
+
+                    setTimeout(() => {
+                      navigate("/booking", {
+                        state: {
+                          designImage: img,
+                          packageName: pkg.name,
+                          serviceName: service.title
+                        }
+                      });
+                    }, 150);
                   }}
 
                   className="w-full bg-rose-600 text-white py-3 rounded-2xl font-bold hover:bg-rose-700 transition-colors text-center shadow-lg shadow-rose-100"
