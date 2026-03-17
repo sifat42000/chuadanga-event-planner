@@ -29,7 +29,8 @@ function ScrollToTop() {
 }
 
 function AppContent() {
-  usePageTracking(); // call this hook 
+
+  usePageTracking(); //call function
 
   return (
     <>
