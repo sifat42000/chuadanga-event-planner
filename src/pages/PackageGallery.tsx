@@ -85,7 +85,7 @@ export default function PackageGallery() {
                   state={{ designImage: img, packageName: pkg.name, serviceName: service.title }}
                   onClick={() => {
                     trackEvent('InitiateCheckout', {
-                      content_name: service.title
+                      content_name: pkg.name
 
                     });
                   }}

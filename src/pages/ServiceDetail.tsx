@@ -15,6 +15,8 @@ export default function ServiceDetail() {
   const { serviceId } = useParams();
   const [selectedImage, setSelectedImage] = React.useState<string | null>(null);
   const service = SERVICES.find(s => s.id === serviceId);
+  console.log(service)
+
 
   if (!service) {
     return <Navigate to="/services" replace />;
