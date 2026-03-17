@@ -9,6 +9,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { SERVICES } from '../constants';
 import { ArrowLeft, X, Maximize2 } from 'lucide-react';
 import ContactSection from '../components/ContactSection';
+import { trackEvent } from '../utils/pixel';
 
 export default function PackageGallery() {
   const { serviceId, packageId } = useParams();
@@ -26,8 +27,8 @@ export default function PackageGallery() {
       {/* Header */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link 
-            to={`/service/${serviceId}`} 
+          <Link
+            to={`/service/${serviceId}`}
             className="inline-flex items-center space-x-2 text-rose-600 hover:text-rose-700 mb-8 font-bold transition-colors"
           >
             <ArrowLeft size={20} />
@@ -63,7 +64,7 @@ export default function PackageGallery() {
                 transition={{ duration: 0.5, delay: index * 0.05 }}
                 className="flex flex-col"
               >
-                <div 
+                <div
                   className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all group cursor-pointer mb-4"
                   onClick={() => setSelectedImage(img)}
                 >
@@ -82,6 +83,13 @@ export default function PackageGallery() {
                 <Link
                   to="/booking"
                   state={{ designImage: img, packageName: pkg.name, serviceName: service.title }}
+                  onClick={() => {
+                    trackEvent('InitiateCheckout', {
+                      content_name: service.title
+
+                    });
+                  }}
+
                   className="w-full bg-rose-600 text-white py-3 rounded-2xl font-bold hover:bg-rose-700 transition-colors text-center shadow-lg shadow-rose-100"
                 >
                   Book Now

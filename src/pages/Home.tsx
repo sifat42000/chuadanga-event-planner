@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, MessageCircle, Phone } from 'lucide-react';
 import { SERVICES, BUSINESS_INFO, PACKAGES } from '../constants';
 import ContactSection from '../components/ContactSection';
+import { trackEvent } from '../utils/pixel';
 
 export default function Home() {
   return (
@@ -54,6 +55,7 @@ export default function Home() {
           href={`https://wa.me/88${BUSINESS_INFO.whatsapp}`}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackEvent('Contact', { method: 'WhatsApp' })}
           className="bg-white/10 backdrop-blur-md hover:bg-white/20 text-white border border-white/30 px-8 py-4 rounded-full text-lg font-semibold flex items-center justify-center space-x-2 transition-all"
         >
           <MessageCircle size={20} />

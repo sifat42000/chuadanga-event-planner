@@ -6,6 +6,7 @@
 import { Phone, MessageCircle, Facebook } from 'lucide-react';
 import { BUSINESS_INFO } from '../constants';
 import { motion } from 'motion/react';
+import { trackEvent } from '../utils/pixel';
 
 export default function ContactSection() {
   return (
@@ -27,6 +28,7 @@ export default function ContactSection() {
               href={`https://wa.me/88${BUSINESS_INFO.whatsapp}`}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackEvent('Contact', { method: 'WhatsApp' })}
               className="flex flex-col items-center p-8 bg-white rounded-3xl shadow-sm hover:shadow-md transition-all group"
             >
               <div className="w-16 h-16 bg-green-100 text-green-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
@@ -38,6 +40,7 @@ export default function ContactSection() {
 
             <a
               href={`tel:${BUSINESS_INFO.phones[0]}`}
+              onClick={() => trackEvent('Contact', { method: 'Phone' })}
               className="flex flex-col items-center p-8 bg-white rounded-3xl shadow-sm hover:shadow-md transition-all group"
             >
               <div className="w-16 h-16 bg-rose-100 text-rose-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
@@ -51,6 +54,7 @@ export default function ContactSection() {
               href={BUSINESS_INFO.facebook}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackEvent('Contact', { method: 'Facebook' })}
               className="flex flex-col items-center p-8 bg-white rounded-3xl shadow-sm hover:shadow-md transition-all group"
             >
               <div className="w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">

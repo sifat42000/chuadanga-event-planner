@@ -6,6 +6,7 @@
 import { motion } from 'motion/react';
 import { BUSINESS_INFO } from '../constants';
 import { Phone, MessageCircle, Facebook, Mail, MapPin, User } from 'lucide-react';
+import { trackEvent } from '../utils/pixel';
 
 export default function Contact() {
   return (
@@ -96,6 +97,7 @@ export default function Contact() {
               <div className="grid grid-cols-1 gap-4">
                 <a
                   href={`tel:${BUSINESS_INFO.phones[0]}`}
+                  onClick={() => trackEvent('Contact', { method: 'Phone' })}
                   className="flex items-center justify-between p-5 sm:p-6 bg-rose-600 text-white rounded-2xl hover:bg-rose-700 transition-all group"
                 >
                   <div className="flex items-center space-x-3 sm:space-x-4">
@@ -109,6 +111,7 @@ export default function Contact() {
                   href={`https://wa.me/88${BUSINESS_INFO.whatsapp}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackEvent('Contact', { method: 'WhatsApp' })}
                   className="flex items-center justify-between p-5 sm:p-6 bg-green-600 text-white rounded-2xl hover:bg-green-700 transition-all group"
                 >
                   <div className="flex items-center space-x-3 sm:space-x-4">
@@ -122,6 +125,7 @@ export default function Contact() {
                   href={BUSINESS_INFO.facebook}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackEvent('Contact', { method: 'Facebook' })}
                   className="flex items-center justify-between p-5 sm:p-6 bg-blue-600 text-white rounded-2xl hover:bg-blue-700 transition-all group"
                 >
                   <div className="flex items-center space-x-3 sm:space-x-4">

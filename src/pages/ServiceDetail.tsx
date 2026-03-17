@@ -9,6 +9,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { SERVICES } from '../constants';
 import { Check, ArrowLeft, X, Maximize2 } from 'lucide-react';
 import ContactSection from '../components/ContactSection';
+import { trackEvent } from '../utils/pixel';
 
 export default function ServiceDetail() {
   const { serviceId } = useParams();
@@ -80,7 +81,7 @@ export default function ServiceDetail() {
                         {pkg.priceRange}
                       </div>
                     </div>
-                    
+
                     <p className="text-gray-600 mb-8 text-sm leading-relaxed">
                       {pkg.description}
                     </p>
@@ -100,8 +101,17 @@ export default function ServiceDetail() {
                   <div className="p-8 pt-0">
                     <Link
                       to={`/service/${service.id}/package/${pkg.id}`}
+                      onClick={() => {
+                        trackEvent('ViewContent', {
+                          content_name: pkg.name,
+                          content_category: service.title,
+                          content_ids: [pkg.id]
+                        });
+                      }}
                       className="block w-full text-center bg-gray-900 text-white py-4 rounded-2xl font-bold hover:bg-rose-600 transition-colors group-hover:scale-[1.02] active:scale-95 duration-300"
                     >
+
+
                       View Designs
                     </Link>
                   </div>
@@ -124,7 +134,7 @@ export default function ServiceDetail() {
                   transition={{ duration: 0.5, delay: index * 0.05 }}
                   className="flex flex-col"
                 >
-                  <div 
+                  <div
                     className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all group cursor-pointer mb-4"
                     onClick={() => setSelectedImage(img)}
                   >
@@ -143,9 +153,18 @@ export default function ServiceDetail() {
                   <Link
                     to="/booking"
                     state={{ designImage: img, serviceName: service.title }}
+                    onClick={() => {
+                      trackEvent('InitiateCheckout', {
+                        content_name: service.title
+
+                      });
+                    }}
+
                     className="w-full bg-rose-600 text-white py-3 rounded-2xl font-bold hover:bg-rose-700 transition-colors text-center shadow-lg shadow-rose-100"
                   >
-                    Book Now
+                        
+                    Book Now 
+                  
                   </Link>
                 </motion.div>
               ))}

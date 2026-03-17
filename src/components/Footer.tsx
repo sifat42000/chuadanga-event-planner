@@ -5,6 +5,7 @@
 
 import { Phone, Mail, Facebook, MapPin } from 'lucide-react';
 import { BUSINESS_INFO } from '../constants';
+import { trackEvent } from '../utils/pixel';
 
 export default function Footer() {
   return (
@@ -50,6 +51,7 @@ export default function Footer() {
               href={BUSINESS_INFO.facebook} 
               target="_blank" 
               rel="noopener noreferrer"
+              onClick={() => trackEvent('Contact', { method: 'Facebook' })}
               className="inline-flex items-center space-x-3 bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-xl transition-colors"
             >
               <Facebook size={20} />

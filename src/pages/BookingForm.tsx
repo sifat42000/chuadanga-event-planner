@@ -7,6 +7,7 @@ import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { ArrowLeft, Send } from 'lucide-react';
+import { trackEvent } from '../utils/pixel';
 
 const VALID_TRACKING_NUMBERS = new Set([
   'X7K9Q2', 'B5Z8T3', 'Q4M1X8', 'H2L9V6', 'N7C4Z1',
@@ -70,19 +71,35 @@ export default function BookingForm() {
 
     const normalized = trackingNumber.trim().toUpperCase();
     const validation = isTrackingValid(normalized);
+
     if (!validation.valid) {
       setTrackingError(validation.error);
       return;
     }
 
+    // duplicate check (BEST WAY)
+    if (!usedTrackingNumbers.has(normalized)) {
+      trackEvent('Purchase', {
+        value: Number(formData.value) || 0,
+        currency: 'BDT',
+        content_name: packageName || serviceName || 'Booking',
+        content_ids: [normalized],
+        num_items: 1,
+      });
+    }
+
+    // save used tracking numbers
     const nextUsed = new Set(usedTrackingNumbers);
     nextUsed.add(normalized);
     setUsedTrackingNumbers(nextUsed);
-    localStorage.setItem('usedTrackingNumbers', JSON.stringify(Array.from(nextUsed)));
+    localStorage.setItem(
+      'usedTrackingNumbers',
+      JSON.stringify(Array.from(nextUsed))
+    );
 
     navigate('/thank-you');
   };
-  
+
 
   return (
     <div className="pt-24 min-h-screen bg-gray-50">
@@ -103,7 +120,7 @@ export default function BookingForm() {
               <p className="text-rose-100 mb-8">
                 Fill out the form to request a booking for this decoration design. We will contact you shortly to confirm the details.
               </p>
-              
+
               {designImage && (
                 <div className="rounded-2xl overflow-hidden border-2 border-white/20 shadow-lg">
                   <img src={designImage} alt="Selected Design" className="w-full aspect-video object-cover" />
@@ -201,11 +218,10 @@ export default function BookingForm() {
                 whileTap={{ scale: 0.98 }}
                 type="submit"
                 disabled={!isTrackingValid(trackingNumber.trim().toUpperCase()).valid}
-                className={`w-full py-5 rounded-2xl font-bold text-lg shadow-lg flex items-center justify-center space-x-2 transition-all ${
-                  isTrackingValid(trackingNumber.trim().toUpperCase()).valid
-                    ? 'bg-rose-600 text-white hover:bg-rose-700 shadow-rose-200'
-                    : 'bg-gray-300 text-gray-500 cursor-not-allowed shadow-none'
-                }`}
+                className={`w-full py-5 rounded-2xl font-bold text-lg shadow-lg flex items-center justify-center space-x-2 transition-all ${isTrackingValid(trackingNumber.trim().toUpperCase()).valid
+                  ? 'bg-rose-600 text-white hover:bg-rose-700 shadow-rose-200'
+                  : 'bg-gray-300 text-gray-500 cursor-not-allowed shadow-none'
+                  }`}
               >
                 <span>Purchase</span>
                 <Send size={20} />
