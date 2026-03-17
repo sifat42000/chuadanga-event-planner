@@ -5,6 +5,8 @@
 
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
+import usePageTracking from './hooks/usePageTracking'; 
+
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -18,15 +20,19 @@ import ThankYou from './pages/ThankYou';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
+
   return null;
 }
 
-export default function App() {
+function AppContent() {
+  usePageTracking(); // call this hook 
+
   return (
-    <Router>
+    <>
       <ScrollToTop />
       <div className="min-h-screen bg-white flex flex-col font-sans selection:bg-rose-100 selection:text-rose-900">
         <Navbar />
@@ -44,6 +50,14 @@ export default function App() {
         </main>
         <Footer />
       </div>
+    </>
+  );
+}
+
+export default function App() {
+  return (
+    <Router>
+      <AppContent /> 
     </Router>
   );
 }
