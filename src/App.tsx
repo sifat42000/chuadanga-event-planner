@@ -5,7 +5,7 @@
 
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
-import usePageTracking from './hooks/usePageTracking'; 
+import usePageTracking from './hooks/usePageTracking';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -18,12 +18,27 @@ import Contact from './pages/Contact';
 import BookingForm from './pages/BookingForm';
 import ThankYou from './pages/ThankYou';
 
+// TypeScript কে fbq চিনতে বলছি
+declare const fbq: (...args: any[]) => void;
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const location = useLocation();
+// old coad
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, [pathname]);
+
 
   useEffect(() => {
+    // পেজ লোড/রাউট চেঞ্জে স্ক্রল টপে নিয়ে আসা
     window.scrollTo(0, 0);
-  }, [pathname]);
+
+    // শুধু হোম পেজে PageView fire হবে
+    if (location.pathname === "/") {
+      fbq('track', 'PageView');
+      console.log("🏠 Home PageView fired");
+    }
+  }, [location.pathname]);
+
 
   return null;
 }
@@ -58,7 +73,7 @@ function AppContent() {
 export default function App() {
   return (
     <Router>
-      <AppContent /> 
+      <AppContent />
     </Router>
   );
 }
