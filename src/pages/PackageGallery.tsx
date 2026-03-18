@@ -94,7 +94,9 @@ export default function PackageGallery() {
                         packageName: pkg.name,
                         serviceName: service.title
                       }
+
                     });
+
                   }}
                   className="w-full bg-rose-600 text-white py-3 rounded-2xl font-bold hover:bg-rose-700 transition-colors text-center shadow-lg shadow-rose-100"
                 >
@@ -106,7 +108,7 @@ export default function PackageGallery() {
         </div>
       </section>
 
-      {/* Lightbox */}
+      {/* Lightbox-commit */}
       <AnimatePresence>
         {selectedImage && (
           <motion.div
