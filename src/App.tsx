@@ -28,6 +28,7 @@ function ScrollToTop() {
   // }, [pathname]);
 
 
+
   useEffect(() => {
     // পেজ লোড/রাউট চেঞ্জে স্ক্রল টপে নিয়ে আসা
     window.scrollTo(0, 0);
@@ -77,3 +78,4 @@ export default function App() {
     </Router>
   );
 }
+
