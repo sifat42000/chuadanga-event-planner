@@ -5,7 +5,7 @@
 
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
-import usePageTracking from './hooks/usePageTracking';
+
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -45,7 +45,7 @@ function ScrollToTop() {
 
 function AppContent() {
 
-  usePageTracking(); //call function
+  
 
   return (
     <>

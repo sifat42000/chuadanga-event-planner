@@ -20,11 +20,15 @@
       s.parentNode.insertBefore(t, s)
     }(window, document, 'script',
       'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '816543171474708');
-    fbq('track', 'PageView');
+
+    fbq('init', '816543171474708', {}, {
+      autoConfig: false
+    });
+
+    //  এখানে আর PageView দিচ্ছি না
   </script>
   <!-- End Meta Pixel Code -->
-  
+
 </head>
 
 <body>
