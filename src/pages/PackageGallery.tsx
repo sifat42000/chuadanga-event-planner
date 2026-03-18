@@ -82,26 +82,23 @@ export default function PackageGallery() {
                     </div>
                   </div>
                 </div>
-                <button
+                <Link
+                  to="/booking"
+                  state={{
+                    designImage: img,
+                    packageName: pkg.name,
+                    serviceName: service.title
+                  }}
                   onClick={() => {
-                    console.log("🔥 InitiateCheckout click fired");
-                    trackEvent('InitiateCheckout', { content_name: pkg.name });
-
-                    // direct navigate, no delay
-                    navigate("/booking", {
-                      state: {
-                        designImage: img,
-                        packageName: pkg.name,
-                        serviceName: service.title
-                      }
-
+                    
+                    trackEvent('InitiateCheckout', {
+                      content_name: pkg.name
                     });
-
                   }}
                   className="w-full bg-rose-600 text-white py-3 rounded-2xl font-bold hover:bg-rose-700 transition-colors text-center shadow-lg shadow-rose-100"
                 >
                   Book Now
-                </button>
+                </Link>
               </motion.div>
             ))}
           </div>

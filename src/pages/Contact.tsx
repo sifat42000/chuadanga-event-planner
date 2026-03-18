@@ -175,10 +175,18 @@ export default function Contact() {
               <div className="mt-10">
                 <h4 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Our Location</h4>
                 <div className="w-full h-56 sm:h-72 md:h-80 rounded-2xl overflow-hidden border border-gray-200">
-                  <iframe
+                  {/* <iframe
                     title="Chuadanga Event Planner Location"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.0824002684623!2d88.8580295!3d23.6451203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fa6fd86566f8df%3A0x61a7a35225d03c0!2sChuadanga%2C%20Bangladesh!5e0!3m2!1sen!2sus!4v1710000000000"
                     className="w-full h-full"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe> */}
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d228.42989228470265!2d88.84661995145994!3d23.644529879010864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fecd9852ae02a9%3A0x7756d52284c7e515!2sBondhutto%20Ful%20Ghor!5e0!3m2!1sen!2sbd!4v1773796670915!5m2!1sen!2sbd"
+                    className="w-full h-full"
+                    style={{ border: 0 }}
+                    allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                   ></iframe>

@@ -35,7 +35,7 @@ function ScrollToTop() {
     // শুধু হোম পেজে PageView fire হবে
     if (location.pathname === "/") {
       fbq('track', 'PageView');
-      console.log("🏠 Home PageView fired");
+      // console.log("🏠 Home PageView fired");
     }
   }, [location.pathname]);
 
