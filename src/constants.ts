@@ -7,7 +7,7 @@ import { BusinessInfo, Service } from './types';
 
 export const BUSINESS_INFO: BusinessInfo = {
   name: "Chuadanga Event Planner",
-  owner: "MD SHAHIN",
+  owner: "SHAHINUR RASHID",
   phones: ["01717445854", "01825052535"],
   whatsapp: "01717445854",
   email: "bondhuttoflowerhouse@gmail.com",

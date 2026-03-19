@@ -84,8 +84,8 @@ export default function About() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: <Award className="text-rose-600" />, title: "5+ Years", desc: "Of professional experience" },
-              { icon: <Users className="text-rose-600" />, title: "500+", desc: "Happy clients served" },
+              { icon: <Award className="text-rose-600" />, title: "22+ Years", desc: "Of professional experience" },
+              { icon: <Users className="text-rose-600" />, title: "5000+", desc: "Happy clients served" },
               { icon: <Sparkles className="text-rose-600" />, title: "Creative", desc: "Unique & modern designs" },
               { icon: <ShieldCheck className="text-rose-600" />, title: "Reliable", desc: "On-time delivery guaranteed" },
             ].map((item, i) => (

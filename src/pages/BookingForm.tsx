@@ -205,7 +205,7 @@ export default function BookingForm() {
                   required
                   value={trackingNumber}
                   onChange={(e) => handleTrackingChange(e.target.value)}
-                  placeholder="Enter tracking number"
+                  placeholder="Contact us if you don’t have it"
                   className="w-full px-5 py-4 rounded-xl border border-gray-200 focus:border-rose-500 focus:ring-2 focus:ring-rose-200 outline-none transition-all"
                 />
                 {trackingError && (

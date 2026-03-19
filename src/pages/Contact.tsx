@@ -142,7 +142,7 @@ export default function Contact() {
                 </p>
               </div>
 
-              <div className="mt-10">
+              {/* <div className="mt-10">
                 <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 text-center">Send a Message</h3>
                 <form className="grid gap-4" onSubmit={(e) => e.preventDefault()}>
                   <input
@@ -170,7 +170,7 @@ export default function Contact() {
                     Send Message
                   </button>
                 </form>
-              </div>
+              </div> */}
 
               <div className="mt-10">
                 <h4 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Our Location</h4>

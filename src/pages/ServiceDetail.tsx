@@ -46,7 +46,7 @@ export default function ServiceDetail() {
           >
             <span className="block">{service.title}</span>
             {service.banglaTitle && (
-              <span className="block text-2xl md:text-3xl font-medium text-gray-200">
+              <span className="block text-2xl md:text-3xl font-medium mt-2 text-gray-200">
                 {service.banglaTitle}
               </span>
             )}
