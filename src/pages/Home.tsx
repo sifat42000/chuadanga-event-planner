@@ -37,13 +37,13 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
-            <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 leading-tight">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
               Beautiful Event Decoration for Your Special Day
             </h1>
-            <p className="text-lg md:text-xl lg:text-2xl mb-6 md:mb-10 text-gray-200">
+            <p className="text-xl md:text-2xl mb-10 text-gray-200">
               Professional decoration services for weddings, engagements, birthdays, and special events in Chuadanga.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 mt-98 md:mt-0">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 to="/services"
                 className="bg-rose-600 hover:bg-rose-700 text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center justify-center space-x-2 transition-all"
