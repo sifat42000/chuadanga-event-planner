@@ -15,7 +15,10 @@
       "source": "/:path*",
       "destination": "https://chuadangaeventplanner.com/:path*",
       "has": [
-        { "type": "host", "value": "chuadanga-event-planner.vercel.app" }
+        {
+          "type": "host",
+          "value": "chuadanga-event-planner.vercel.app"
+        }
       ],
       "permanent": true
     }
