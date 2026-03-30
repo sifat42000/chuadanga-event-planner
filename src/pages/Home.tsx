@@ -14,56 +14,99 @@ export default function Home() {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="relative h-[90vh] flex items-center overflow-hidden">
-        {/* Background Video */}
-        <div className="absolute inset-0 z-0">
-          <iframe
-            className="w-full h-full object-cover pointer-events-none"
-            src="https://www.youtube.com/embed/--O2muDxKgY?autoplay=1&mute=1&controls=0&loop=1&playlist=--O2muDxKgY&modestbranding=1&rel=0&showinfo=0"
-            title="Hero Background Video"
-            frameBorder="0"
-            allow="autoplay; fullscreen"
-            allowFullScreen
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+        {/* Background Image with Picture Element */}
+        <picture className="absolute inset-0 z-0">
+          {/* Mobile image for screens up to 768px */}
+          <source media="(max-width: 768px)" srcSet="/Image/banner/banner-2.jpg" />
+          {/* Desktop/Tablet image - default */}
+          <img
+            src="/Image/banner/banner.jpg"
+            alt="Event Decoration Hero Background"
+            className="w-full h-full object-cover"
+            style={{
+              animation: 'zoom-in 20s ease-in-out infinite alternate',
+            }}
           />
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-black/50" />
-        </div>
+        </picture>
+
+        {/* Dark Gradient Overlay */}
+        <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/70 via-black/50 to-black/70" />
 
         {/* Hero Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+        <div className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
             className="max-w-3xl"
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+            {/* Staggered Content Children */}
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white"
+            >
               Beautiful Event Decoration for Your Special Day
-            </h1>
-            <p className="text-xl md:text-2xl mb-10 text-gray-200">
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-lg sm:text-xl md:text-2xl mb-16 sm:mb-10 text-gray-200 leading-relaxed"
+            >
               Professional decoration services for weddings, engagements, birthdays, and special events in Chuadanga.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            </motion.p>
+
+            {/* Buttons Container */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="flex flex-col sm:flex-row gap-4"
+            >
+              {/* Primary Button */}
               <Link
                 to="/services"
-                className="bg-rose-600 hover:bg-rose-700 text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center justify-center space-x-2 transition-all"
+                className="group bg-rose-600 hover:bg-rose-700 text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center justify-center space-x-2 transition-all duration-300 ease-in-out hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 <span>View Services</span>
-                <ArrowRight size={20} />
+                <motion.div
+                  animate={{ x: [0, 5, 0] }}
+                  transition={{ repeat: Infinity, duration: 1.5 }}
+                >
+                  <ArrowRight size={20} />
+                </motion.div>
               </Link>
+
+              {/* Secondary Button - Glassmorphism */}
               <a
                 href={`https://wa.me/88${BUSINESS_INFO.whatsapp}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackEvent('Contact', { method: 'WhatsApp' })}
-                className="bg-white/10 backdrop-blur-md hover:bg-white/20 text-white border border-white/30 px-8 py-4 rounded-full text-lg font-semibold flex items-center justify-center space-x-2 transition-all"
+                className="group bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border border-white/40 px-8 py-4 rounded-full text-lg font-semibold flex items-center justify-center space-x-2 transition-all duration-300 ease-in-out hover:scale-105 hover:border-white/60 shadow-lg hover:shadow-xl"
               >
                 <MessageCircle size={20} />
                 <span>WhatsApp Us</span>
               </a>
-            </div>
+            </motion.div>
           </motion.div>
         </div>
+
+        {/* CSS Animation for Background Zoom */}
+        <style>{`
+          @keyframes zoom-in {
+            from {
+              transform: scale(1);
+            }
+            to {
+              transform: scale(1.05);
+            }
+          }
+        `}</style>
       </section>
 
       {/* About Section */}

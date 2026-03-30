@@ -7,5 +7,5 @@ export default function usePageTracking() {
 
   useEffect(() => {
     trackPageView();
-  }, [location]);
+  }, [location.pathname]);
 }
